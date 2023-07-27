@@ -1,0 +1,31 @@
+float a,b,c;
+float d,e,f;
+int fcount = 0; 
+void setup() {
+size(1000,800);
+background(255);
+a = 200;
+b = 200;
+c = 1.9;
+d = 400;
+e = 200;
+f = 2.9;
+textSize(50);
+}
+void draw(){
+if (fcount < 120){
+  background(155,255,150);
+  vichea(a,b,c,0);
+} else if (fcount < 240) {
+  background(100,250,255);
+  vichea1(d,e,f,0);
+}
+else {
+  background(255,150,255);
+  vichea(a,b,c,1);
+  vichea1(d,e,f,1);
+}
+  fcount++;
+  if (fcount>360) fcount = 0;
+  text(fcount/60 + " sec", 100, 100);
+}
