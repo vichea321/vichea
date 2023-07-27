@@ -1,0 +1,67 @@
+float a,b,c,vy,vx;
+float a1,b1,c1,vy1,vx1;
+float a2,b2,c2,vy2,vx2;
+float a3,b3,c3,vy3,vx3;
+void setup(){
+size(800,500);
+a = 250; b = 100; c = 2.4;
+vy = 7;
+vx = 6;
+a1 = 260; b1 = 150; c1 = 1.4;
+vy1 = 6;
+vx1 = -8;
+a2 =280; b2 = 180; c2 = 1;
+vy2 = 4;
+vx2 = -9;
+a3 = 150; b3 = 80; c3 = 0.9;
+vy3 = 7;
+vx3 = -5;
+}
+void draw(){
+  background(#00ECFF);
+  a += vx;
+  b += vy;
+  //a1 = 300;b1 = 200; c1 = 2.3;
+  a1 += vx1;
+  b1 += vy1;
+  a2 += vx2;
+  b2 += vy2;
+  a3 += vx3;
+  b3 += vy3;
+  vichea(a,b,c);
+  vichea(a1,b1,c1);
+   vichea(a2,b2,c2);
+    vichea(a3,b3,c3);
+  //vichea(a,b+2,c);
+  if(a>width || a<0)  {vx = -vx; }
+  if(b>height || b<0) {vy = -vy; }
+  if(a1>width || a1<0)  {vx1 = -vx1; }
+  if(b1>height || b1<0) {vy1 = -vy1; }
+    if(a2>width || a2<0)  {vx2 = -vx2; }
+  if(b2>height || b2<0) {vy2 = -vy2; }
+    if(a3>width || a3<0)  {vx3 = -vx3; }
+  if(b3>height || b3<0) {vy3 = -vy3; }
+
+}
+void vichea(float x, float y,float d){
+fill(#674A33);
+rect(x+10*d,y+12*d,d*69,d*10); //rect(250,160,340,50);
+rect(x+26*d,y+28*d,d*36,d*10); //rect(330,240,180,50);
+rect(x+26*d,y+40*d,d*36,d*10); //rect(330,300,180,50);
+rect(x+26*d,y+52*d,d*36,d*10); //rect(330,360,180,50);
+rect(x+40*d,y+12*d,d*10,d*60); //rect(400,160,50,300); //body
+square(x+30*d,y-11*d,d*30); //square(350,50,150);
+square(x+1*d,y,d*20); //square(200,100,100);
+square(x+70*d,y+1*d,d*20); //head //square(550,100,100); //head
+fill(#FFFFFF);
+square(x+48*d,y-4*d,d*6); // square(380,80,30);
+square(x+35*d,y-4*d,d*6); // square(440,80,30);
+square(x+4*d,y+4*d,d*4); // square(220,120,20);
+square(x+12*d,y+4*d,d*4); //square(260,120,20);
+square(x+74*d,y+4*d,d*4); //square(570,120,20);
+fill(#F5F5F5);
+square(x+82*d,y+4*d,d*4); //eye // square(610,120,2); //eye
+rect(x+39*d,y+9*d,d*12,d*4); // rect(395,140,60,20);
+rect(x+5*d,y+12*d,d*10,d*4); // rect(225,160,50,20);
+rect(x+75*d,y+12*d,d*10,d*4); //rect(575,160,50,20);
+}
