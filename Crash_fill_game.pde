@@ -54,7 +54,6 @@ void draw() {
   }
 }
 void mouseReleased() {
-  for (int i=0; i<1; i++) {
       x3[2]=mouseX;
-      y3[2]= mouseY;}
+      y3[2]= mouseY;
 }
