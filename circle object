@@ -1,0 +1,38 @@
+float [] x, y, d, vx, vy;
+void setup() {
+  size(1000, 800);
+  x = new float[9];
+  y = new float[9];
+  d = new float[9];
+  vx = new float[9];
+  vy = new float[9];
+  for (int i=0; i<9; i++) {
+    x[i] = random(width);
+    y[i] = random(height);
+    d[i] = random(5, 10);
+    vx[i] = random(5, 5);
+    vy[i] = random(5, 5);
+  }
+}// setup()
+void draw() {
+  background(#B30FF5);
+  for (int i=0; i<9; i++) {
+    if (i != 3 && i != 6) {
+      x[i] += vx[i];
+      y[i] += vy[i];
+      if (x[i]<0 || x[i]>width) vx[i] = -vx[i];
+      if (y[i]<0 || y[i]>height) vy[i] = -vy[i];
+    } else if (i == 3) {
+      x[i] = mouseX;
+      y[i] = mouseY;
+    }
+    if (i<5) vichea(x[i], y[i], d[i]);
+    else vichea1(x[i], y[i], d[i]);
+  } // for
+} // draw()
+void keyPressed() {
+ if(key == 'a') x[6] -= 10;
+ else if(key == 'd') y[6] += 10;
+ else if(key == 'w') y[6] -= 10;
+ else if(key == 's') y[6] += 10;
+ }
