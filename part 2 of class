@@ -1,0 +1,41 @@
+class yang {
+  yang() {
+    x = width/2;
+    y = height/2;
+    d = 20;
+    op =0;
+    vx = vy = random(5,10);
+  };
+  yang(float dd){
+    d=dd;
+    x = 300;
+    y = 200;
+    op =1;
+    vx = vy = random(3,5);
+   };
+  yang(float xx,float yy,float dd,int oo){
+    x = xx;
+    y = yy;
+    d = dd; 
+    op = oo;
+    vx = random(5,10);
+    vy = random(5,10);
+};
+float x,y,d,vx,vy;
+int op;
+void display() {
+fill(#F20717);
+circle(x+2*d,y-5*d,d*25);
+fill(#FFF7F8); //eye
+ellipse(x-2*d,y-10*d,d*5,d*5);
+ellipse(x+5*d,y-10*d,d*5,d*5);
+fill(255);
+ellipse(x-2*d,y-10*d,d*5,d*5);
+}
+void chan(){
+  y += vy;
+  x += vx;
+  if(y > height || y < 0) vy = -vy;
+  if(x > height || x < 0) vx = -vx;
+}
+}
