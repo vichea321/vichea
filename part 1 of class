@@ -1,0 +1,16 @@
+yang [] vichea;
+void setup() {
+  size(800,800);
+  vichea = new yang[3];
+  for(int i=0; i<3; i++){
+    vichea[i] = new yang(2+2*i,2+2*i,2+2*i,1);
+}
+}
+void draw() {
+  background(#6803FA);
+  for(int i=0; i<3; i++){
+    vichea[i].chan();
+    vichea[i].display();
+  }
+}
+  
