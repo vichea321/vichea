@@ -1,0 +1,42 @@
+class yang {
+yang() {
+x = width/2;
+y = height/2;
+d = 20;
+op =0;
+vx = random(3, 5);
+vy = random(3, 5);
+palm = new treetree(); 
+};
+yang(float dd) {
+d=dd;
+x = 300;
+y = 200;
+op =1;
+vx = random(3, 5);
+vy = random(3, 5);
+palm = new treetree(); 
+};
+float x, y, d, vx, vy;
+treetree palm; 
+int op;
+void display() {
+fill(#F20717);
+circle(x+2*d, y-5*d, d*25);
+fill(#FFF7F8);
+ellipse(x-2*d, y-10*d, d*5, d*5);
+ellipse(x+5*d, y-10*d, d*5, d*5);
+fill(255);
+ellipse(x-2*d, y-10*d, d*5, d*5);
+palm.x = x+d*10;
+palm.y = y-d*20;
+palm.d = d*10;
+palm.tree(); 
+}
+void chan() {
+y += vy;
+x += vx;
+if (y > height || y < 0) vy = -vy;
+if (x > height || x < 0) vx = -vx;
+}
+}
