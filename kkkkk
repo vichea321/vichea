@@ -1,0 +1,13 @@
+class vicheasigma extends vichea{
+vicheasigma(){
+super();
+}
+vicheasigma(float d,float m,float z){
+  super(d,m,z);
+}
+void vvv(){
+drawcircle();
+fill(#0A0204);
+circle(390,225,20);
+}
+}
