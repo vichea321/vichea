@@ -1,0 +1,13 @@
+class vichealima extends vichea{
+vichealima(){
+super();
+}
+vichealima(float d,float m,float z){
+  super(d,m,z);
+}
+void nothing(){
+drawcircle();
+ fill(255);
+ rect(x+1*d, y+0.10*d, 5*d, 3*d);
+}
+}
