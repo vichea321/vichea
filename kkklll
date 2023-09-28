@@ -1,0 +1,20 @@
+class vichea {
+vichea(){ x =(400);
+y =(300);
+d = random(5,5);
+};
+vichea(float d,float m,float z){
+  x = d; y = m; d = z;
+}
+float x,y,d;
+void drawcircle(){
+  fill(#35E80E);
+circle(x+2*d,y-5*d,d*25);
+fill(#FFF7F8); //eye
+ellipse(x-2*d,y-10*d,d*5,d*5);
+ellipse(x+5*d,y-10*d,d*5,d*5);
+fill(255);
+ellipse(x-2*d,y-10*d,d*5,d*5);
+//ellipse(x*5+d,y-10*d,d*5,d*5);
+}
+}
