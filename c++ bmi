@@ -1,0 +1,27 @@
+#include <iostream>
+#define N 5
+
+float calculateBMI(float weight, float height) {
+  return weight / (height * height);
+}
+
+using namespace std;
+
+int main() {
+  const float hh[] = {1.75, 1.56, 1.90, 1.66, 1.69};
+  const float ww[] = {75, 45, 63, 59, 41};
+  float BMIs[N];  // Array to store calculated BMIs
+
+  for (int i = 0; i < N; i++) {
+    BMIs[i] = calculateBMI(ww[i], hh[i]);  // Call the function for each person
+  }
+
+  cout << "body fitnesss index \n";
+
+  for (int i = 0; i < N; i++) {
+    cout << "BMI for person " << i + 1 << ": " << BMIs[i] << endl;
+    cout << "(k, h) = (" << ww[i] << ", " << hh[i] << ")\n";
+  }
+
+  return 0;  // Indicate successful program termination
+}
